@@ -6,13 +6,21 @@ namespace MatrixChess
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter matrix size: ");
+            Console.WriteLine("Enter matrix n size: ");
             int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter matrix m size: ");
             int m = int.Parse(Console.ReadLine());
 
             int o = 1;
 
             int[,] matchess = new int[n, m];
+
+            for(int i = 0; i<matchess.Length; i++)
+            {
+                for (int j = 0; j < matchess.Length; j++)
+                    matchess[i, j] = o;
+                    
+            }
          
         }
     }
