@@ -25,6 +25,8 @@ namespace MatrixChess
                         matchess[i, j] = 0;
                     o = -o;
                 }
+                if (n % 2 == 0)
+                    o = -o;
             }
             
 
@@ -32,7 +34,7 @@ namespace MatrixChess
             {
                 for (int j = 0; j < m; j++)
                 { 
-                    Console.Write(matchess[i, j]);                
+                    Console.Write("\t{0}", matchess[i, j]);                
                   
                 }
                 Console.WriteLine();
