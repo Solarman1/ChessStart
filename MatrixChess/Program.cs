@@ -14,6 +14,13 @@ namespace MatrixChess
             int o = 1;
 
             int[,] matchess = new int[n, m];
+            int[,] steps = { 
+                { 1, 2 }, { -1, 2 }, 
+                { 1, -2 }, { -1, -2 },
+                { 2, 1 }, { -2, 1 },
+                { 2, -1}, {-2, -1}
+            };
+           
 
             for (int i = 0; i < n; i++)
             {
@@ -22,7 +29,7 @@ namespace MatrixChess
                     if (o == 1)
                         matchess[i, j] = 1;
                     else
-                        matchess[i, j] = 0;
+                        matchess[i, j] = steps[2,0];
                     o = -o;
                 }
                 if (n % 2 == 0)
